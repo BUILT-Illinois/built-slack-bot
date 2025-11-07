@@ -3,15 +3,18 @@ name: Terraform Validate & Apply
 on:
   workflow_dispatch:  
   pull_request:
+    # dispatch when pull request on main, from aws_backend or src folder
     branches:
       - main
     paths:
       - "aws_backend/**"
+      - "src/**"
   push:
     branches:
       - main
     paths:
       - "aws_backend/**"
+      - "src/**"
 
 jobs:
   opentofu:
@@ -20,7 +23,7 @@ jobs:
 
     env:
       AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} 
       AWS_DEFAULT_REGION: "us-east-1"
 
     steps:
