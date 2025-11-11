@@ -30,7 +30,7 @@ resource "aws_api_gateway_integration" "event_integration" {
   http_method             = aws_api_gateway_method.post_event.http_method
   integration_http_method = "POST"
   type                    = "AWS_PROXY"
-  uri                     = var.api_lambda_invoke_arn
+  uri                     = "arn:aws:apigateway:${var.aws_region}:lambda:path/2015-03-31/functions/${var.api_lambda_arn}/invocations"
 }
 
 # Create a deployment (a snapshot of your API configuration)

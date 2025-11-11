@@ -8,7 +8,7 @@ terraform {
   backend "s3" {
     bucket = "built-slack-bot"      # S3 bucket where the state file will be stored
     key    = "terraform.tfstate" # Path within the S3 bucket
-    region = "us-east-1"         # AWS region for the S3 bucket
+    region = "us-east-2"         # AWS region for the S3 bucket
   }
 }
 
