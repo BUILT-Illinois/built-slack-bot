@@ -1,4 +1,4 @@
-# BUILT-Slack-Bot
+# B[U]ILT-Slack-Bot
 
 Welcome to B[U]ILT Slack Bot repository! Here you will find the current bot's code, anything we're currently working on, a description of our tech stack, and our best practices.
 
